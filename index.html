@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map in university</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="main">
+    <section class="map">
+      <div class="container">
+        <div class="map-road">
+          <div class="pin" id="player-pin">
+            <img src="./img/pin.png" alt="player-pin">
+          </div>
+          <div class="menu">
+            <div class="friends">
+              <div class="arrow arrow-prew" id="arrow-prew">
+                <img src="./img/arrow-prew.png" alt="Назад">
+              </div>
+              <div class="friends-list-wrap">
+                <div class="slider-track">
+                  <ul class="friends-list">
+                    <li class="friends-list__item">
+                      <a href="#" class="friends-list__link add-friends-icon">
+                        <img class="friends-list__img" src="./img/user-avatar.png" alt="user1">
+                      </a>
+                    </li>
+                    <li class="friends-list__item">
+                      <a href="#" class="friends-list__link">
+                        <img class="friends-list__img" src="./img/user-avatar.png" alt="user2">
+                      </a>
+                    </li>
+                    <li class="friends-list__item">
+                      <a href="#" class="friends-list__link">
+                        <img class="friends-list__img" src="./img/user-avatar.png" alt="user3">
+                      </a>
+                    </li>
+                    <li class="friends-list__item">
+                      <a href="#" class="friends-list__link">
+                        <img class="friends-list__img" src="./img/user-avatar.png" alt="user4">
+                      </a>
+                    </li>
+                    <li class="friends-list__item">
+                      <a href="#" class="friends-list__link">
+                        <img class="friends-list__img" src="./img/user-avatar.png" alt="user5">
+                      </a>
+                    </li>
+                    <li class="friends-list__item">
+                      <a href="#" class="friends-list__link">
+                        <img class="friends-list__img" src="./img/user-avatar.png" alt="user6">
+                      </a>
+                    </li>
+                    <li class="friends-list__item"></li>
+                    <li class="friends-list__item"></li>
+                    <li class="friends-list__item"></li>
+                    <li class="friends-list__item"></li>
+                    <li class="friends-list__item"></li>
+                    <li class="friends-list__item"></li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class="arrow arrow-next" id="arrow-next">
+                <img src="./img/arrow-next.png" alt="Вперёд">
+              </div>
+            </div>
+            <button class="btn chat-btn" id="chat-open" type="button">
+              <img src="./img/chat-icon.png" alt="Чат">
+            </button>
+            <button class="btn action-btn btn-in-university" id="action-btn" type="button">
+              <img src="./img/university-btn.png" alt="Кнопка вперёд">
+            </button>
+            <button class="btn mail-btn" id="mail-open" type="button">
+              <img src="./img/mail-icon.png" alt="Почта">
+            </button>
+            <button class="btn rating-btn" id="rating" type="button">
+              <img src="./img/raiting-icon.png" alt="Рейтинг">
+            </button>
+          </div>
+          <div class="modal modal-rating" id="modal-rating">
+            <div class="modal__header">
+              <img src="./img/modal-title.png" alt="Рейтинг игроков">
+            </div>
+            <button class="btn btn-close" id="rating-close">
+              <img src="./img/close-icon.png" alt="Закрыть">
+            </button>
+            <div class="modal__content">
+              <div class="modal__content-inner">
+                <div class="title-row">
+                  <span class="modal__content-place">Место</span>
+                  <span class="modal__content-name">Имя Фамилия</span>
+                  <span class="modal__content-exp">Опыт</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="overlay hidden" id="overlay"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <template id="template" style="display:none;">
+    <div class="content-row">
+      <span class="modal__content-place">1</span>
+      <span class="modal__content-avatar"></span>
+      <span class="modal__content-name">Имя Фамилия</span>
+      <span class="modal__content-exp">100000</span>
+    </div>
+  </template>
+  <script src="./js/data.js"></script>
+  <script src="./js/main-b.js"></script>
+
+</body>
+
+</html>
