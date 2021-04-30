@@ -2,9 +2,22 @@
   document.addEventListener("DOMContentLoaded", (e) => {
     const actionBtn = document.querySelector('#action-btn');
     const pin = document.querySelector('#player-pin');
+    
+    const action = 10;
+    let actionCount=0;
 
+    
     actionBtn.addEventListener('click', () => {
-      pin.classList.add('university-stage1');
+      if (actionCount<=action-1) {
+        actionCount++;
+        actionBtn.classList.add('btn-disabled');
+        pin.classList.add(`university-stage${actionCount}`);
+        pin.classList.remove(`university-stage${actionCount-1}`);
+        setTimeout(() => {
+          actionBtn.classList.remove('btn-disabled');
+        }, 1500);
+      }
+      
     })
     //slider
     const prewSlide = document.querySelector('#arrow-prew');

@@ -42,12 +42,6 @@ ul {
   bottom: 119px;
   left: 435px;
 }
-.university-stage1 {
-  will-change              : transform;
-  animation                : move-to-university 5s 1;
-  animation-timing-function: linear;
-  animation-fill-mode      : forwards;
-}
 .menu {
   display: flex;
   align-items: center;
@@ -276,44 +270,194 @@ ul {
 .hidden {
   display: none;
 }
-@keyframes move-to-university {
+.btn-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+.btn-disabled:hover {
+  filter: none;
+}
+.university-stage1 {
+  will-change              : transform;
+  animation                : move-to-university1 1.8s 1 forwards linear;
+}
+.university-stage2 {
+  will-change              : transform;
+  animation                : move-to-university2 1.3s 1 forwards linear;
+}
+.university-stage3 {
+  will-change: transform;
+  animation  : move-to-university3 1.2s 1 forwards linear;
+}
+.university-stage4 {
+  will-change: transform;
+  animation  : move-to-university4 1.2s 1 forwards linear;
+}
+.university-stage5 {
+  will-change: transform;
+  animation  : move-to-university5 1.4s 1 forwards linear;
+}
+.university-stage6 {
+  will-change: transform;
+  animation  : move-to-university6 1.3s 1 forwards linear;
+}
+.university-stage7 {
+  will-change: transform;
+  animation  : move-to-university7 1.3s 1 forwards linear;
+}
+.university-stage8 {
+  will-change: transform;
+  animation  : move-to-university8 1.7s 1 forwards linear;
+}
+.university-stage9 {
+  will-change: transform;
+  animation  : move-to-university9 1.5s 1 forwards linear;
+}
+.university-stage10 {
+  will-change: transform;
+  animation  : move-to-university10 1.9s 1 forwards linear;
+}
+@keyframes move-to-university1 {
   0% {
     bottom: 119px;
     left  : 435px;
   }
 
-  8% {
+  30% {
     transform: translate3d(-28px, -13px, 0);
   }
 
-  19% {
+  63% {
     transform: translate3d(-51px, -40px, 0);
   }
 
-  22% {
+  75% {
     transform: translate3d(-67px, -41px, 0);
   }
-
-  45% {
-    transform: translate3d(-168px, 14px, 0);
-  }
-  52% {
-    transform: translate3d(-196px, 29px, 0);
-  }
-
-  67% {
-    transform: translate3d(-280px, 30px, 0);
-  }
-
-  85% {
-    transform: translate3d(-358px, -11px, 0);
-  }
-
-  92% {
-    transform: translate3d(-361px, -31px, 0);
-  }
-
   100% {
-    transform: translate3d(-321px, -60px, 0);
+    transform: translate3d(-95px, -31px, 0);
+  }
+}
+@keyframes move-to-university2 {
+  from {
+    transform: translate3d(-95px, -31px, 0);
+  }
+  to {
+    transform: translate3d(-169px, 12px, 0);
+  }
+}
+@keyframes move-to-university3 {
+  from {
+    transform: translate3d(-169px,12px,0);
+  }
+  40% {
+    transform: translate3d(-194px, 27px, 0);
+  }
+  to {
+    transform: translate3d(-256px, 33px, 0);
+  }
+}
+@keyframes move-to-university4 {
+  from {
+    transform: translate3d(-256px, 33px, 0);
+  }
+
+  40% {
+    transform: translate3d(-292px, 27px, 0);
+  }
+
+  to {
+    transform: translate3d(-335px, 5px, 0);
+  }
+}
+@keyframes move-to-university5 {
+  from {
+    transform: translate3d(-335px, 5px, 0);
+  }
+
+  35% {
+    transform: translate3d(-360px, -14px, 0);
+  }
+  60% {
+    transform: translate3d(-360px, -32px, 0);
+  }
+  to {
+    transform: translate3d(-322px, -61px, 0);
+  }
+}
+@keyframes move-to-university6 {
+  from {
+    transform: translate3d(-322px, -61px, 0);
+  }
+
+  40% {
+    transform: translate3d(-333px, -79px, 0);
+  }
+
+  70% {
+    transform: translate3d(-323px, -104px, 0);
+  }
+
+  to {
+    transform: translate3d(-303px, -116px, 0);
+  }
+}
+@keyframes move-to-university7 {
+  from {
+    transform: translate3d(-303px, -116px, 0);
+  }
+  to {
+    transform: translate3d(-231px, -155px, 0);
+  }
+}
+@keyframes move-to-university8 {
+  from {
+    transform: translate3d(-231px, -155px, 0);
+  }
+  25% {
+    transform: translate3d(-209px, -167px, 0);
+  }
+  40%{
+    transform: translate3d(-207px, -183px, 0);
+  }
+  to {
+    transform: translate3d(-270px, -225px, 0);
+  }
+}
+@keyframes move-to-university9 {
+  from {
+    transform: translate3d(-270px, -225px, 0);
+  }
+
+  60% {
+    transform: translate3d(-320px, -253px, 0);
+  }
+
+  80% {
+    transform: translate3d(-322px, -267px, 0);
+  }
+
+  to {
+    transform: translate3d(-308px, -277px, 0);
+  }
+}
+@keyframes move-to-university10 {
+  from {
+    transform: translate3d(-308px, -277px, 0);
+  }
+
+  27% {
+    transform: translate3d(-283px, -290px, 0);
+  }
+
+  57% {
+    transform: translate3d(-292px, -316px, 0);
+  }
+  78% {
+    transform: translate3d(-262px, -325px, 0);
+  }
+
+  to {
+    transform: translate3d(-244px, -308px, 0);
   }
 }

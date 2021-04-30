@@ -4,9 +4,20 @@
   document.addEventListener("DOMContentLoaded", function (e) {
     var actionBtn = document.querySelector('#action-btn');
     var pin = document.querySelector('#player-pin');
+
+    var action = 10;
+    var actionCount = 0;
     actionBtn.addEventListener('click', function () {
-      pin.classList.add('university-stage1');
-    }); //slider
+      if (actionCount <= action - 1) {
+        actionCount++;
+        actionBtn.classList.add('btn-disabled');
+        pin.classList.add("university-stage".concat(actionCount));
+        pin.classList.remove("university-stage".concat(actionCount - 1));
+        setTimeout(function () {
+          actionBtn.classList.remove('btn-disabled');
+        }, 1500);
+      }
+    });
 
     var prewSlide = document.querySelector('#arrow-prew');
     var nextSlide = document.querySelector('#arrow-next');
